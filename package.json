@@ -1,0 +1,23 @@
+{
+  "name": "apparo",
+  "version": "1.0.0",
+  "description": "A seat arranger made with electron for schools",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frigus27/Apparo.git"
+  },
+  "author": "Frigus27",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Frigus27/Apparo/issues"
+  },
+  "homepage": "https://github.com/Frigus27/Apparo#readme",
+  "devDependencies": {
+    "electron": "^13.1.7"
+  }
+}

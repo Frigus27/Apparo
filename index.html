@@ -1,0 +1,54 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <div id="win">
+      <div id="sidebar">
+        <div id="logo">
+          <img src="images/logo.svg" alt="">
+          <span id="logo-span-first">App</span><span id="logo-span-second">aro</span>
+        </div>
+        <ul class="menu">
+          <li>座位安排器</li>
+          <li>学生信息设定</li>
+          <li>设置</li>
+          <li>关于</li>
+        </ul>
+      </div>
+      <div id="right-panel">
+        <div id="title-bar">
+          <div id="close-button" onclick="onCloseButtonClick()"></div>
+          <div id="minimize-button" onclick="onMinimizeButtonClick()"></div>
+        </div>
+        <div id="content">
+          <h1>座位打乱器</h1>
+          We are using Node.js <span id="node-version"></span>,
+          Chromium <span id="chrome-version"></span>,
+          and Electron <span id="electron-version"></span>.
+        </div>
+      </div>
+
+      <!-- You can also require other files to run in this process -->
+      <script>
+        let ipcRenderer = require('electron').ipcRenderer;
+
+        function onMinimizeButtonClick() {
+            ipcRenderer.send("window-min");
+        }
+
+        function onCloseButtonClick() {
+            ipcRenderer.send("window-close");
+        }
+      </script>
+    </div>
+  </body>
+</html>

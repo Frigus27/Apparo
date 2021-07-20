@@ -1,0 +1,145 @@
+
+
+body {
+    width: 800px;
+    height: 600px;
+    background-color: rgba(0,0,0,0);
+    overflow: hidden;
+    font-family:'Microsoft YaHei UI', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Microsoft YaHei UI Extralight";
+}
+
+#title-bar {
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 48px;
+    text-align: left;
+    vertical-align: middle;
+    -webkit-app-region: drag;
+}
+
+#close-button {
+    background-image: url("images/close-normal.svg");
+    background-size: 42px 28px;
+    width: 42px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 18px;
+    float: right;
+    cursor: pointer;
+    user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+#close-button:hover {
+    background-image: url("images/close-hover.svg");
+    background-size: 42px 28px;
+    width: 42px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 18px;
+    float: right;
+    cursor: pointer;
+    user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+#minimize-button {
+    background-image: url("images/minimize-normal.svg");
+    background-size: 42px 28px;
+    width: 42px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 18px;
+    float: right;
+    cursor: pointer;
+    user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+#minimize-button:hover {
+    background-image: url("images/minimize-hover.svg");
+    background-size: 42px 28px;
+    width: 42px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 18px;
+    float: right;
+    cursor: pointer;
+    user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+#win {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-app-region: drag;
+}
+
+#sidebar {
+    width: 25%;
+    height: 98%;
+    padding: 16px;
+    text-align: center;
+    float: left;
+    background-color: aliceblue;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+#logo {
+    width: 100%;
+}
+
+#logo img {
+    width: 25%;
+    vertical-align: middle;
+    -webkit-user-drag: none;
+}
+
+#logo span {
+    font-family: "Microsoft YaHei UI Light";
+    font-size: 18pt;
+    vertical-align: middle;
+}
+
+#logo-span-first {
+    color: red;
+}
+
+#logo-span-second {
+    color: black;
+}
+
+#right-panel {
+    margin-left: 25%;
+    height: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+    -webkit-app-region: no-drag;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+#content {
+    padding-left: 50px;
+    padding-right: 30px;
+}
