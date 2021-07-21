@@ -14,23 +14,37 @@
     <div id="win">
       <div id="sidebar">
         <div id="logo">
-          <img src="images/logo.svg" alt="">
+          <img src="images/logo.svg" alt=""/>
           <span id="logo-span-first">App</span><span id="logo-span-second">aro</span>
         </div>
-        <ul class="menu">
-          <li>座位安排器</li>
-          <li>学生信息设定</li>
-          <li>设置</li>
-          <li>关于</li>
-        </ul>
+        <div class="sidebar-menu">
+          <div class="sidebar-menu-item" id="seat-arrangement">
+            <span class="sidebar-menu-item-image">
+              <img src="images/sidebar-menu-item/seat-arrangement.svg"/>
+            </span>
+            <span class="sidebar-menu-item-text">安排座位</span>
+          </div>
+          <div class="sidebar-menu-item" id="student-info">
+            <span class="sidebar-menu-item-image">
+              <img src="images/sidebar-menu-item/student-info.svg"/>
+            </span>
+            <span class="sidebar-menu-item-text">学生信息</span>
+          </div>
+          <div class="sidebar-menu-item" id="settings">
+            <span class="sidebar-menu-item-image">
+              <img src="images/sidebar-menu-item/settings.svg"/>
+            </span>
+            <span class="sidebar-menu-item-text">软件设置</span>
+          </div>
+        </div>
       </div>
       <div id="right-panel">
         <div id="title-bar">
-          <div id="close-button" onclick="onCloseButtonClick()"></div>
-          <div id="minimize-button" onclick="onMinimizeButtonClick()"></div>
+          <div id="close-button"></div>
+          <div id="minimize-button"></div>
         </div>
         <div id="content">
-          <h1>座位打乱器</h1>
+          <h1>次级页面</h1>
           We are using Node.js <span id="node-version"></span>,
           Chromium <span id="chrome-version"></span>,
           and Electron <span id="electron-version"></span>.
@@ -38,17 +52,7 @@
       </div>
 
       <!-- You can also require other files to run in this process -->
-      <script>
-        let ipcRenderer = require('electron').ipcRenderer;
-
-        function onMinimizeButtonClick() {
-            ipcRenderer.send("window-min");
-        }
-
-        function onCloseButtonClick() {
-            ipcRenderer.send("window-close");
-        }
-      </script>
+      <script src="renderer.js"></script>
     </div>
   </body>
 </html>

@@ -16,11 +16,12 @@ h1, h2, h3 {
     right: 0px;
     top: 0px;
     width: 100%;
-    height: 48px;
+    height: 28px;
     text-align: left;
     vertical-align: middle;
     -webkit-app-region: drag;
 }
+
 
 #close-button {
     background-image: url("images/close-normal.svg");
@@ -49,6 +50,7 @@ h1, h2, h3 {
     user-select: none;
     -webkit-app-region: no-drag;
 }
+
 
 #minimize-button {
     background-image: url("images/minimize-normal.svg");
@@ -88,9 +90,10 @@ h1, h2, h3 {
 }
 
 #sidebar {
-    width: 25%;
-    height: 98%;
+    width: 20%;
+    height: 95%;
     padding: 16px;
+    padding-top: 32px;
     text-align: center;
     float: left;
     background-color: aliceblue;
@@ -126,7 +129,7 @@ h1, h2, h3 {
 }
 
 #right-panel {
-    margin-left: 25%;
+    margin-left: 20%;
     height: 100%;
     padding: 10px;
     text-align: left;
@@ -143,3 +146,80 @@ h1, h2, h3 {
     padding-left: 50px;
     padding-right: 30px;
 }
+
+div.sidebar-menu {
+    position: fixed;
+    top: 15%;
+    width: 15%;
+    text-align: center;
+}
+
+div.sidebar-menu-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: aliceblue;
+    text-align: left;
+    vertical-align: center;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+div.sidebar-menu-item:hover {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: #1453AD;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: aliceblue;
+    text-align: left;
+    vertical-align: center;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+div.sidebar-menu-item-chosen {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: #1453AD;
+    text-align: left;
+    vertical-align: center;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+span.sidebar-menu-item-image {
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: middle;
+    vertical-align: middle;
+}
+
+span.sidebar-menu-item-image img {
+    height: 100%;
+    vertical-align: middle;
+    -webkit-user-drag: none;
+}
+
+span.sidebar-menu-item-text {
+    height: 100%;
+    font-family: "Microsoft YaHei UI Light";
+    float: right;
+    font-size: larger;
+    text-align: right;
+}
+

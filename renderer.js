@@ -1,9 +1,15 @@
 let ipcRenderer = require('electron').ipcRenderer;
 
-function onMinimizeButtonClick() {
-    ipcRenderer.send("window-min");
+let closeBtn = document.getElementById("close-button");
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        ipcRenderer.send('window-event', 'close');
+    })
 }
 
-function onCloseButtonClick() {
-    ipcRenderer.send("window-close");
+let minBtn = document.getElementById("minimize-button");
+if (minBtn) {
+    minBtn.addEventListener('click', () => {
+        ipcRenderer.send('window-event', 'min');
+    })
 }
