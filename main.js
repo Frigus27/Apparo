@@ -27,7 +27,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -60,4 +60,11 @@ ipcMain.on('window-event', function(event, arg) {
   else if (arg == "min") {
     mainWindow.minimize();
   }
+})
+
+ipcMain.on('menu-button-clicked', function(event, currentId) {
+})
+
+ipcMain.on('developer-button-clicked', function(event) {
+  mainWindow.webContents.openDevTools();
 })
